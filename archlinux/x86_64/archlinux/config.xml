@@ -23,19 +23,29 @@
         <type image="iso" flags="overlay" hybrid="true" hybridpersistent_filesystem="ext4" hybridpersistent="true" firmware="efi"/>
     </preferences>
     <preferences profiles="Virtual">
-        <type image="vmx" primary="true" filesystem="ext4" bootloader="grub2" firmware="efi"/>
+        <type image="vmx" primary="true" filesystem="ext4" bootloader="grub2" firmware="efi">
+            <machine memory="1024" guestOS="archlinux" HWversion="4">
+                <vmnic driver="e1000" interface="0" mode="bridged"/>
+            </machine>
+        </type>
     </preferences>
     <preferences profiles="Disk">
         <type image="oem" initrd_system="dracut" filesystem="ext4" bootloader="grub2"/>
     </preferences>
     <users>
-        <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
+        <user password="$1$xyz$um/D4EMaMIwhtMDK/8P1v1" home="/root" name="root" groups="root"/>
     </users>
     <repository alias="KIWI" components="Virtualization_Appliances_Builder_Arch_Linux">
         <source path="https://download.opensuse.org/repositories/Virtualization:/Appliances:/Builder/Arch_Linux/x86_64/"/>
     </repository>
+    <!--
     <repository alias="dracut_hooks" components="Virtualization_Appliances_Images_Testing_x86_archlinux">
+    -->
+    <repository alias="dracut_hooks" components="home_sbradnick_branches_Virtualization_Appliances_Images_Testing_x86_archlinux">
+        <!--
         <source path="https://download.opensuse.org/repositories/Virtualization:/Appliances:/Images:/Testing_x86:/archlinux/standard/x86_64/"/>
+        -->
+        <source path="https://download.opensuse.org/repositories/home:/sbradnick:/branches:/Virtualization:/Appliances:/Images:/Testing_x86:/archlinux/standard/x86_64/"/>
     </repository>
     <repository alias="ArchOS" components="core extra community">
         <source path="http://ftp.heanet.ie/mirrors/ftp.archlinux.org/$repo/os/$arch"/>

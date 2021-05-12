@@ -46,7 +46,7 @@
         </type>
     </preferences>
     <users>
-        <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
+        <user password="$1$xyz$um/D4EMaMIwhtMDK/8P1v1" home="/root" name="root" groups="root"/>
     </users>
     <repository type="rpm-md" alias="kiwi" priority="1">
         <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_15.2"/>
