@@ -1,0 +1,12 @@
+LEAP 15.2:
+
+# kiwi-ng --profile=Virtual --type oem system build --description ~scott/GIT/github/kiwi-descriptions/suse/x86_64/suse-leap-15.2 --target-dir /var/tmp/leap15.2
+# chown -R scott:users /var/tmp/leap15.2
+$ qemu-system-x86_64 -boot c -drive file=/var/tmp/leap15.2/Leap-15.2_appliance.x86_64-1.15.2.raw,format=raw,if=virtio -m 1024
+
+ARCHLINUX:
+
+# kiwi-ng --profile=Virtual --type oem system build --description ~scott/GIT/github/kiwi-descriptions/archlinux/x86_64/archlinux --target-dir /var/tmp/archlinux
+# chown -R scott:users /var/tmp/archlinux
+$ qemu-system-x86_64 -boot c -drive file=/var/tmp/archlinux/Arch_appliance.x86_64-1.0.0.raw,format=raw,if=virtio -m 1024
+; look in /etc/pacman.conf for 'key' commands to get keyring working and packages installable.
