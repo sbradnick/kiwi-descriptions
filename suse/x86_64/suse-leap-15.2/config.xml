@@ -18,11 +18,24 @@
         <packagemanager>zypper</packagemanager>
         <locale>en_US</locale>
         <keytable>us</keytable>
-        <timezone>Europe/Berlin</timezone>
+        <timezone>America/New_York</timezone>
         <rpm-excludedocs>true</rpm-excludedocs>
         <rpm-check-signatures>false</rpm-check-signatures>
         <bootsplash-theme>bgrt</bootsplash-theme>
         <bootloader-theme>openSUSE</bootloader-theme>
+        <type image="appx" metadata_path="/usr/share/wsl-appx">
+            <!-- This doesn't work as described
+            <containerconfig name="Leap152">
+                <history
+                    created_by="SUSE"
+                    author="sbradnick"
+                    application_id="Leap152"
+                    package_version="1.152.38.1"
+                    launcher="openSUSE-Leap-15.2.exe"
+                >Leap-15.2 Appliance text based</history>
+            </containerconfig>
+            -->
+        </type>
     </preferences>
     <preferences profiles="Live">
         <type image="iso" primary="true" flags="overlay" hybrid="true" firmware="efi" kernelcmdline="splash" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="true"/>
